@@ -35,6 +35,8 @@ section {
 .hero {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  background-color: antiquewhite;
 }
 
 .hero--photo {
@@ -69,10 +71,14 @@ section {
   flex-wrap: nowrap;
   gap: 20px;
   overflow-x: auto;
+  justify-content: center;
+  background-color: antiquewhite;
 }
 
 .card--image {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 9px;
   margin-bottom: 9px;
 }
