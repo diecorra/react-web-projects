@@ -1,6 +1,6 @@
 # Digital Business Card
 
-Build an simple AirBnb Experiences Clone static pages, created with React.
+Application that simulate an AirBnb static pages.
 
 Link: https://diecorra-digitalbusinesscard.netlify.app/
 
