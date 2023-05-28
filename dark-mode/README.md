@@ -1,3 +1,5 @@
 ## dark-mode project
 
-Link: https://dark-mode-tutorial.netlify.app/
+Application created to switch from light-mode screen to dark-mode.
+
+Link: https://dark-modereact.netlify.app

@@ -1,3 +1,5 @@
-### Per visionare il progetto completo
+# ice-cream-shop
 
-Link al progetto completo: https://gelateria-tutorial.netlify.app/
+Application that takes data from API and displays information about ice creams.
+
+Link: https://react-icecream-shop.netlify.app
