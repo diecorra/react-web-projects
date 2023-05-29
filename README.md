@@ -7,3 +7,4 @@ Projects created to learn the basics of React library, created by me.<br>
 3. Holidays: https://react-holidays.netlify.app
 4. Meetings: https://react-meetings.netlify.app
 5. Ice Cream Shop: https://react-icecream-shop.netlify.app
+6. Color Grading: https://react-colorgrading.netlify.app
