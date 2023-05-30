@@ -5,13 +5,13 @@ import TotalBox from './components/TotalBox';
 import { useGlobalContext } from './context/context';
 
 function App() {
-  const { isLoading, products } = useGlobalContext();
+  const { isLoading, products, total } = useGlobalContext();
 
   if (isLoading) {
     return (
-      <div className="App">
+      <div className='App'>
         <Navbar />
-        <div className="center-item">
+        <div className='center-item'>
           <Loading />
         </div>
       </div>
@@ -19,16 +19,16 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className='App'>
       <Navbar />
       {products.length > 0 ? (
         <Cart />
       ) : (
-        <div className="center-item">
+        <div className='center-item'>
           <h4>No products in cart!</h4>
         </div>
       )}
-      <TotalBox />
+      {total > 0 && <TotalBox />}
     </div>
   );
 }

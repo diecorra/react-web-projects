@@ -6,3 +6,4 @@ export const EMPTY_CART = 'EMPYT_CART';
 export const ADD_ITEM = 'ADD_ITEM';
 export const DEC_ITEM = 'DEC_ITEM';
 export const TOTAL_COST = 'TOTAL_COST';
+export const ITEM_COUNTER = 'ITEM_COUNTER';

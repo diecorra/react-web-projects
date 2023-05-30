@@ -8,6 +8,8 @@ import {
   DEC_ITEM,
   DELETE_ITEM,
   EMPTY_CART,
+  TOTAL_COST,
+  ITEM_COUNTER,
 } from './actions';
 import reducer from './reducer';
 const url = 'https://react--course-api.herokuapp.com/api/v1/data/cart';
@@ -52,6 +54,11 @@ const AppProvider = ({ children }) => {
       }
     })();
   }, []);
+
+  useEffect(() => {
+    dispatch({ type: TOTAL_COST });
+    dispatch({ type: ITEM_COUNTER });
+  }, [state.products]);
 
   return (
     <AppContext.Provider

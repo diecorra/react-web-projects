@@ -6,6 +6,7 @@ import {
   DEC_ITEM,
   DELETE_ITEM,
   EMPTY_CART,
+  ITEM_COUNTER,
   TOTAL_COST,
 } from './actions';
 
@@ -54,8 +55,16 @@ const reducer = (state, { type, payload }) => {
   if (type === TOTAL_COST) {
     return {
       ...state,
-      totale: state.products.reduce((total, item) => {
+      total: state.products.reduce((total, item) => {
         return total + item.qty * item.price;
+      }, 0),
+    };
+  }
+  if (type === ITEM_COUNTER) {
+    return {
+      ...state,
+      itemCounter: state.products.reduce((total, item) => {
+        return total + item.qty;
       }, 0),
     };
   }
