@@ -1,0 +1,8 @@
+export const DATA_FETCHING_STARTED = 'DATA_FETCHING_STARTED';
+export const DATA_FETCHING_SUCCESS = 'DATA_FETCHING_SUCCESS';
+export const DATA_FETCHING_FAIL = 'DATA_FETCHING_FAIL';
+export const DELETE_ITEM = 'DELETE_ITEM';
+export const EMPTY_CART = 'EMPYT_CART';
+export const ADD_ITEM = 'ADD_ITEM';
+export const DEC_ITEM = 'DEC_ITEM';
+export const TOTAL_COST = 'TOTAL_COST';
