@@ -1,3 +1,3 @@
-## Per Visionare il progetto completo
+# cart
 
-Link al progetto Completo: https://cart-tutorial.netlify.app/
+Link: https://react-cartitem.netlify.app
