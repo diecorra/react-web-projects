@@ -93,7 +93,7 @@ const HomeScreen = () => {
           <p className='result'>{count} results</p>
         </div>
         {!isLoading && isError ? (
-          <ErrorMessage>No Cocktail found!</ErrorMessage>
+          <ErrorMessage>Cocktail not found</ErrorMessage>
         ) : !isLoading && !isError ? (
           <Cocktails data={data.drinks} />
         ) : (

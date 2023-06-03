@@ -5,36 +5,37 @@ import { IoArrowBackCircleSharp } from 'react-icons/io5';
 import styled from 'styled-components';
 import useFetch from '../useFetch';
 import useTitle from '../useTitle';
-
 const SingleCocktailScreen = () => {
   const { id } = useParams();
-  const { isLoading, isError, data } = useFetch(`i=${id}, true`);
+  const { data, isLoading, isError } = useFetch(`i=${id}`, true);
   useTitle(data && data.drinks ? data.drinks[0].strDrink : 'Not Found');
   if (isLoading) {
     return (
       <Wrapper>
-        <Loading />
+        <Loading />;
       </Wrapper>
     );
   }
   if (isError) {
     return (
       <Wrapper>
-        <div className='container cocktail-container'>
+        <div className='cocktail-content container'>
           <header>
             <Link to='/'>
               <IoArrowBackCircleSharp className='icon' />
             </Link>
+            <h4 className='back-arrow'>Go back Home</h4>
           </header>
-          <ErrorMessage>Cocktail not available!</ErrorMessage>
+          <ErrorMessage>Cocktail Not Available</ErrorMessage>
         </div>
       </Wrapper>
     );
   }
+
   const {
-    strDrink: name,
-    strCategory: category,
     strAlcoholic: type,
+    strCategory: category,
+    strDrink: name,
     strGlass,
     strDrinkThumb: image,
     strIngredient1,
@@ -42,46 +43,30 @@ const SingleCocktailScreen = () => {
     strIngredient3,
     strIngredient4,
     strIngredient5,
+    strInstructions,
     strMeasure1,
     strMeasure2,
     strMeasure3,
     strMeasure4,
     strMeasure5,
-    strInstructions,
   } = data.drinks[0];
 
   const strInstructionsList = [
-    {
-      instruction: strIngredient1,
-      qty: strMeasure1,
-    },
-    {
-      instruction: strIngredient2,
-      qty: strMeasure2,
-    },
-    {
-      instruction: strIngredient3,
-      qty: strMeasure3,
-    },
-    {
-      instruction: strIngredient4,
-      qty: strMeasure4,
-    },
-    {
-      instruction: strIngredient5,
-      qty: strMeasure5,
-    },
+    { instruction: strIngredient1, qty: strMeasure1 },
+    { instruction: strIngredient2, qty: strMeasure2 },
+    { instruction: strIngredient3, qty: strMeasure3 },
+    { instruction: strIngredient4, qty: strMeasure4 },
+    { instruction: strIngredient5, qty: strMeasure5 },
   ];
 
   return (
     <Wrapper>
-      <div className='container cocktail-container'>
+      <div className='cocktail-content container'>
         <header>
           <Link to='/'>
             <IoArrowBackCircleSharp className='icon' />
           </Link>
           <h4 className='back-arrow'>GO BACK HOME</h4>
-          <ErrorMessage>Cocktail not available!</ErrorMessage>
         </header>
         <hr />
         <div className='cocktail-container'>
@@ -113,6 +98,7 @@ const SingleCocktailScreen = () => {
               </ul>
             </div>
             <hr />
+
             <div className='spacer'>
               <h4>Instructions:</h4>
               <p className='info'>{strInstructions}</p>
@@ -125,7 +111,7 @@ const SingleCocktailScreen = () => {
 };
 
 const Wrapper = styled.section`
-  min-height: 96vh;
+  height: auto;
   padding-bottom: 4rem;
   .spacer {
     display: grid;

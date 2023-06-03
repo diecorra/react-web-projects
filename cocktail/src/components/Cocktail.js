@@ -5,8 +5,8 @@ import { HiClipboardList } from 'react-icons/hi';
 import { useGlobalContext } from '../context';
 
 const Cocktail = ({ strDrinkThumb: img, idDrink: _id, strDrink: name }) => {
-  const [show, setShow] = useState(false);
   const { getScrollPosition } = useGlobalContext();
+  const [show, setShow] = useState(false);
   const navigate = useNavigate();
 
   const goToCocktail = (_id) => {
@@ -39,7 +39,10 @@ const Cocktail = ({ strDrinkThumb: img, idDrink: _id, strDrink: name }) => {
         }
       >
         <h5>{name}</h5>
-        <div className='see-more-btn brand-color'>
+        <div
+          className='see-more-btn brand-color'
+          onClick={() => goToCocktail(_id)}
+        >
           <h5>Recipe</h5>
           <HiClipboardList className='icon ' />
         </div>
@@ -90,8 +93,7 @@ const Wrapper = styled.article`
   }
 
   .see-more-btn {
-    display: grid;
-    grid-template-columns: 1fr auto;
+    display: flex;
     align-items: center;
     gap: 0.7rem;
     transition: var(--transition);
