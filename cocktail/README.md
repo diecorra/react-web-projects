@@ -1,6 +1,6 @@
 # cocktail
 
-Link: https://wiki-drink.netlify.app
+Link: https://wikidrink-cocktail.netlify.app
 
 #### External Link
 
