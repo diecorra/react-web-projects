@@ -1,9 +1,19 @@
+import { NavLink, Outlet } from 'react-router-dom';
+
+const isActive = (obj: { isActive: boolean }) => {
+  return obj.isActive ? 'btn primary' : 'btn';
+};
+
 export const CMSPage = () => {
   return (
     <div>
-      <h1 className="title">CMS</h1> content here
+      <NavLink to="/cms/products" className={isActive}>
+        Products
+      </NavLink>
+      <NavLink to="/cms/orders" className={isActive}>
+        Orders
+      </NavLink>
+      <Outlet />
     </div>
   );
 };
-
-export default CMSPage;

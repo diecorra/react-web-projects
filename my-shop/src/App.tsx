@@ -5,15 +5,17 @@ import {
   Route,
   Routes,
 } from 'react-router-dom';
-import ShopPage from './features/shop/ShopPage';
-import CartPage from './features/cart/CartPage';
-import CheckoutPage from './features/checkout/CheckoutPage';
-import ThanksPage from './features/checkout/ThanksPage';
-import LoginPage from './features/login/LoginPage';
-import CMSPage from './features/cms/CMSPage';
-import CMSProductsPage from './features/cms/products/CMSProductsPage';
-import CMSOrdersPage from './features/cms/orders/CMSOrdersPage';
-import NavBar from './shared/components/core/NavBar';
+import {
+  CMSOrdersPage,
+  CMSPage,
+  CMSProductsPage,
+  CartPage,
+  CheckoutPage,
+  LoginPage,
+  ShopPage,
+  ThanksPage,
+} from './features';
+import { NavBar } from '@/shared/index';
 
 function App() {
   return (
