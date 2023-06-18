@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { pb } from '../../pocketbase';
 import { ProductCard } from './components/ProductCard';
 import { ServerError, Spinner } from '@/shared/';
+import { useCartPanel } from '@/services/cart';
 
 export const ShopPage = () => {
   const [products, setProducts] = useState<Product[]>([]);
