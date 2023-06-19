@@ -2,7 +2,7 @@ import { Product } from '@/model/product';
 
 interface ProductCardProps {
   product: Partial<Product>;
-  onAddToCard: (product: Partial<Product>) => void;
+  onAddToCart: (product: Partial<Product>) => void;
 }
 
 export const ProductCard = (props: ProductCardProps) => {
@@ -22,7 +22,7 @@ export const ProductCard = (props: ProductCardProps) => {
       <p className="p-3">{p.description}</p>
       <button
         className="bg-sky-600 text-white hover:bg-sky-800 transition w-full text-center font-bold p-3"
-        onClick={() => props.onAddToCard(p)}
+        onClick={() => props.onAddToCart(p)}
       >
         ADD TO CART
       </button>
